@@ -136,7 +136,7 @@ def generate_api(address, signature):
     print(
         f"""
         def {signature.name}({signature.args}):
-            return communication.send({address}, {signature.args})
+            return communication.send({address} - BASE_ADDRESS, {signature.args})
         """
     )
 
